@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet ChatView *chatView;
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
-@property (nonatomic, strong) NSArray<NSString *> *posts;
+@property (nonatomic, strong) NSArray *posts;
 
 @end
 
@@ -27,15 +27,18 @@
     self.chatView.chatTextField.placeholder = @"Type your message here...";
     [self.chatTableView reloadData];
     
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(onTimer) userInfo:nil repeats:true];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(onTimer) userInfo:nil repeats:true];
 }
 
 - (void)onTimer {
+    [self queryParse];
     [self.chatTableView reloadData];
 }
 
 - (IBAction)onTapSend:(id)sender {
     PFObject *chatMessage = [PFObject objectWithClassName:@"Message_FBU2021"];
+    chatMessage[@"text"] = self.chatView.chatTextField.text;
+    chatMessage[@"user"] = PFUser.currentUser;
     [chatMessage saveInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (succeeded) {
             self.chatView.chatTextField.text = @"";
@@ -58,7 +61,7 @@
     [query orderByDescending:@"createdAt"];
     query.limit = 20;
 
-    [query findObjectsInBackgroundWithBlock:^(NSArray<NSString *> *posts, NSError *error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
             self.posts = posts;
             [self.chatTableView reloadData];
@@ -72,7 +75,7 @@
     ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell"
                                                      forIndexPath:indexPath];
     if (indexPath.row < self.posts.count) {
-        cell.chatLabel.text = self.posts[indexPath.row];
+        cell.chatLabel.text = self.posts[indexPath.row][@"text"];
     }
     return cell;
 }
