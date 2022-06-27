@@ -25,6 +25,13 @@
     
     self.chatTableView.dataSource = self;
     self.chatView.chatTextField.placeholder = @"Type your message here...";
+    [self.chatTableView reloadData];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(onTimer) userInfo:nil repeats:true];
+}
+
+- (void)onTimer {
+    [self.chatTableView reloadData];
 }
 
 - (IBAction)onTapSend:(id)sender {
