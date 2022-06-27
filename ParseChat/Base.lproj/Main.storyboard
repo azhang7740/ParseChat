@@ -87,7 +87,7 @@
         <!--Chat-->
         <scene sceneID="Xpr-6X-ibq">
             <objects>
-                <viewController title="Chat" id="j8f-M7-kHB" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" title="Chat" id="j8f-M7-kHB" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7D-ZJ-1WO" customClass="ChatView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,29 +109,42 @@
                                 <rect key="frame" x="0.0" y="136" width="414" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="e5J-Ta-G3L" customClass="ChatCell">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="159" id="e5J-Ta-G3L" customClass="ChatCell">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5J-Ta-G3L" id="4jr-Ka-QKd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tN-Xb-gMU">
-                                                    <rect key="frame" x="20" y="10" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="47" width="374" height="102"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-tT-kHg">
+                                                    <rect key="frame" x="20" y="21" width="374" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0JP-L8-bVm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0tN-Xb-gMU" firstAttribute="top" secondItem="4jr-Ka-QKd" secondAttribute="top" constant="10" id="R2N-da-vXb"/>
+                                                <constraint firstItem="0tN-Xb-gMU" firstAttribute="top" secondItem="rdB-tT-kHg" secondAttribute="bottom" constant="5" id="Ft3-Qe-gvz"/>
                                                 <constraint firstAttribute="bottom" secondItem="0tN-Xb-gMU" secondAttribute="bottom" constant="10" id="R7I-1f-6Km"/>
+                                                <constraint firstItem="0tN-Xb-gMU" firstAttribute="leading" secondItem="rdB-tT-kHg" secondAttribute="leading" id="Wcq-3U-6af"/>
+                                                <constraint firstItem="rdB-tT-kHg" firstAttribute="top" secondItem="4jr-Ka-QKd" secondAttribute="topMargin" constant="10" id="XpF-8F-Gq6"/>
                                                 <constraint firstItem="0tN-Xb-gMU" firstAttribute="leading" secondItem="4jr-Ka-QKd" secondAttribute="leading" constant="20" id="hK6-k6-TR5"/>
                                                 <constraint firstAttribute="trailing" secondItem="0tN-Xb-gMU" secondAttribute="trailing" constant="20" id="n3p-dW-mTV"/>
+                                                <constraint firstItem="0tN-Xb-gMU" firstAttribute="trailing" secondItem="rdB-tT-kHg" secondAttribute="trailing" id="skf-ni-Sml"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="chatLabel" destination="0tN-Xb-gMU" id="cKx-va-VBd"/>
+                                            <outlet property="usernameLabel" destination="rdB-tT-kHg" id="D3S-rL-rnA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

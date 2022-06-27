@@ -59,6 +59,7 @@
 - (void)queryParse {
     PFQuery *query = [PFQuery queryWithClassName:@"Message_FBU2021"];
     [query orderByDescending:@"createdAt"];
+    [query includeKey:@"user"];
     query.limit = 20;
 
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -76,6 +77,12 @@
                                                      forIndexPath:indexPath];
     if (indexPath.row < self.posts.count) {
         cell.chatLabel.text = self.posts[indexPath.row][@"text"];
+        PFUser *user = self.posts[indexPath.row][@"user"];
+        if (user != nil) {
+            cell.usernameLabel.text = user.username;
+        } else {
+            cell.usernameLabel.text = @"🤖";
+        }
     }
     return cell;
 }
