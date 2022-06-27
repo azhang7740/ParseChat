@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -31,11 +31,17 @@
                                 <rect key="frame" x="102.5" y="403" width="75" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onTapSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmd-ai-dC5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vod-Dg-Et3">
                                 <rect key="frame" x="251.5" y="403" width="60" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <action selector="onTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KdS-TL-Sny"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvU-5w-yv3">
                                 <rect key="frame" x="102.5" y="315" width="209" height="34"/>
@@ -62,7 +68,17 @@
                             <constraint firstItem="6QS-Om-VGp" firstAttribute="top" secondItem="c92-x8-KGQ" secondAttribute="bottom" constant="10" id="iWd-2G-RII"/>
                             <constraint firstItem="k02-aD-4Ap" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="230" id="qRN-3c-eaH"/>
                         </constraints>
+                        <connections>
+                            <outlet property="loginButton" destination="Vod-Dg-Et3" id="HLH-xy-ttG"/>
+                            <outlet property="passwordTextField" destination="c92-x8-KGQ" id="y9i-f6-L4Z"/>
+                            <outlet property="signUpButton" destination="6QS-Om-VGp" id="hkm-kv-cS7"/>
+                            <outlet property="titleLabel" destination="k02-aD-4Ap" id="5LO-hp-Tw0"/>
+                            <outlet property="userNameTextField" destination="AvU-5w-yv3" id="w0r-Bm-fAW"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="Qhx-57-lSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

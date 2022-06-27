@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		413DE423286A0ACD00CCF8E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE422286A0ACD00CCF8E1 /* AppDelegate.m */; };
 		413DE426286A0ACD00CCF8E1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE425286A0ACD00CCF8E1 /* SceneDelegate.m */; };
-		413DE429286A0ACD00CCF8E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE428286A0ACD00CCF8E1 /* LoginViewController.m */; };
 		413DE42C286A0ACD00CCF8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413DE42A286A0ACD00CCF8E1 /* Main.storyboard */; };
 		413DE42E286A0ACE00CCF8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413DE42D286A0ACE00CCF8E1 /* Assets.xcassets */; };
 		413DE431286A0ACE00CCF8E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413DE42F286A0ACE00CCF8E1 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,8 @@
 		413DE43E286A0ACE00CCF8E1 /* ParseChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE43D286A0ACE00CCF8E1 /* ParseChatTests.m */; };
 		413DE448286A0ACE00CCF8E1 /* ParseChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE447286A0ACE00CCF8E1 /* ParseChatUITests.m */; };
 		413DE44A286A0ACE00CCF8E1 /* ParseChatUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE449286A0ACE00CCF8E1 /* ParseChatUITestsLaunchTests.m */; };
+		413DE45A286A0DFB00CCF8E1 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE459286A0DFB00CCF8E1 /* LoginView.m */; };
+		413DE45D286A0ED300CCF8E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413DE45C286A0ED300CCF8E1 /* LoginViewController.m */; };
 		4D3B116C1D0EB1D2D491026D /* libPods-ParseChat-ParseChatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E825DA7FA45A4496043F7DA8 /* libPods-ParseChat-ParseChatUITests.a */; };
 		A32596A3D14312B4D73A1DE5 /* libPods-ParseChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70CBD269116C287194D2C8 /* libPods-ParseChatTests.a */; };
 		A3B4310C8BE4C372BE1363C5 /* libPods-ParseChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF187658F0D6870D98D2B7D /* libPods-ParseChat.a */; };
@@ -47,8 +48,6 @@
 		413DE422286A0ACD00CCF8E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		413DE424286A0ACD00CCF8E1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		413DE425286A0ACD00CCF8E1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		413DE427286A0ACD00CCF8E1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		413DE428286A0ACD00CCF8E1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		413DE42B286A0ACD00CCF8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		413DE42D286A0ACE00CCF8E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413DE430286A0ACE00CCF8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +58,10 @@
 		413DE443286A0ACE00CCF8E1 /* ParseChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		413DE447286A0ACE00CCF8E1 /* ParseChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseChatUITests.m; sourceTree = "<group>"; };
 		413DE449286A0ACE00CCF8E1 /* ParseChatUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseChatUITestsLaunchTests.m; sourceTree = "<group>"; };
+		413DE458286A0DFB00CCF8E1 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		413DE459286A0DFB00CCF8E1 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		413DE45B286A0ED300CCF8E1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		413DE45C286A0ED300CCF8E1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		67FDC195250ECD10CAEF204D /* Pods-ParseChat-ParseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat-ParseChatUITests.release.xcconfig"; path = "Target Support Files/Pods-ParseChat-ParseChatUITests/Pods-ParseChat-ParseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6C46B0A1ABFFFEA79FEB37A1 /* Pods-ParseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat.debug.xcconfig"; path = "Target Support Files/Pods-ParseChat/Pods-ParseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF187658F0D6870D98D2B7D /* libPods-ParseChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,12 +137,12 @@
 		413DE420286A0ACD00CCF8E1 /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
+				413DE457286A0DE300CCF8E1 /* View Controllers */,
+				413DE456286A0DDC00CCF8E1 /* Views */,
 				413DE421286A0ACD00CCF8E1 /* AppDelegate.h */,
 				413DE422286A0ACD00CCF8E1 /* AppDelegate.m */,
 				413DE424286A0ACD00CCF8E1 /* SceneDelegate.h */,
 				413DE425286A0ACD00CCF8E1 /* SceneDelegate.m */,
-				413DE427286A0ACD00CCF8E1 /* LoginViewController.h */,
-				413DE428286A0ACD00CCF8E1 /* LoginViewController.m */,
 				413DE42A286A0ACD00CCF8E1 /* Main.storyboard */,
 				413DE42D286A0ACE00CCF8E1 /* Assets.xcassets */,
 				413DE42F286A0ACE00CCF8E1 /* LaunchScreen.storyboard */,
@@ -164,6 +167,24 @@
 				413DE449286A0ACE00CCF8E1 /* ParseChatUITestsLaunchTests.m */,
 			);
 			path = ParseChatUITests;
+			sourceTree = "<group>";
+		};
+		413DE456286A0DDC00CCF8E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				413DE458286A0DFB00CCF8E1 /* LoginView.h */,
+				413DE459286A0DFB00CCF8E1 /* LoginView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		413DE457286A0DE300CCF8E1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				413DE45B286A0ED300CCF8E1 /* LoginViewController.h */,
+				413DE45C286A0ED300CCF8E1 /* LoginViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		C97763F51A849E154AAC518E /* Frameworks */ = {
@@ -414,10 +435,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413DE429286A0ACD00CCF8E1 /* LoginViewController.m in Sources */,
 				413DE423286A0ACD00CCF8E1 /* AppDelegate.m in Sources */,
 				413DE434286A0ACE00CCF8E1 /* main.m in Sources */,
+				413DE45A286A0DFB00CCF8E1 /* LoginView.m in Sources */,
 				413DE426286A0ACD00CCF8E1 /* SceneDelegate.m in Sources */,
+				413DE45D286A0ED300CCF8E1 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
