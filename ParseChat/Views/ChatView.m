@@ -1,12 +1,12 @@
 //
-//  LoginView.m
+//  ChatView.m
 //  ParseChat
 //
 //  Created by Angelina Zhang on 6/27/22.
 //
 
-#import "LoginView.h"
+#import "ChatView.h"
 
-@implementation LoginView
+@implementation ChatView
 
 @end

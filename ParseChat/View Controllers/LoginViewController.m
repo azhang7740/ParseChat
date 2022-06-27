@@ -8,6 +8,7 @@
 #import "LoginViewController.h"
 #import "loginView.h"
 #import <Parse/Parse.h>
+#import "ChatViewController.h"
 
 @interface LoginViewController ()
 
@@ -20,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.loginView.userNameTextField.text = nil;
+    self.loginView.passwordTextField.text = nil;
+    self.loginView.userNameTextField.placeholder = @"username";
+    self.loginView.passwordTextField.placeholder = @"password";
 }
 
 - (void)registerUser {
@@ -30,7 +35,8 @@
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error == nil) {
-            // segue
+            UINavigationController *navigationController = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"ChatNavigation"];
+           [self presentViewController:navigationController animated:YES completion:nil];
         } else {
             [self displayAlert:@"Error signing in."];
         }
@@ -43,7 +49,8 @@
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error == nil) {
-            // segue
+            UINavigationController *navigationController = (UINavigationController*)[self.storyboard instantiateViewControllerWithIdentifier:@"ChatNavigation"];
+           [self presentViewController:navigationController animated:YES completion:nil];
         } else {
             [self displayAlert:@"Error logging in."];
         }
